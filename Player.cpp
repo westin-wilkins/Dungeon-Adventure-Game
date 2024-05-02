@@ -11,7 +11,8 @@ void Player::addItemToInventory(const std::string& item)
     playerInventory.addItem(item);
 }
 
-void Player::deleteItemFromInventory(size_t index)
+void Player::deleteItemFromInventory(size_t index)  //Change so that item is dropped 
+                                                    //(added to room contents instead of deleted)
 {
     playerInventory.deleteItem(index);
 }

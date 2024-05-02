@@ -18,6 +18,7 @@ int main()
     player.addItemToInventory("Potion");
     player.addItemToInventory("Potion");
     player.printInventory();
+    player.deleteItemFromInventory(2);
 
     return 0;
 }
