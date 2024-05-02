@@ -35,8 +35,8 @@ public:
 	std::vector<std::string> getEnemiesInRoom() const;
 
 	//	Setter Methods
-	void setItemsInRoom(std::vector<std::string>& newItems);	//Setter items dropped into rooms
+	void setItemsInRoom(std::vector<std::string>& newItems);	//	Setter items dropped into rooms
 
-};	void setExits(const std::map<std::string, bool>& newExits);	//Setter for temporary false values like 
-																//locked doors that need keys to open
+};	void setExits(const std::map<std::string, bool>& newExits);	//	Setter for temporary false values like 
+																//	locked doors that need keys to open
 
