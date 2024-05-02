@@ -35,10 +35,10 @@ std::vector<std::string> Room::getEnemiesInRoom() const
 //  Setter methods
 void Room::setItemsInRoom(std::vector<std::string>& newItems)
 {
-
+    //Add code
 }
 
 void setExits(const std::map<std::string, bool>& newExits)
 {
-
+    //Add code
 }

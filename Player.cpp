@@ -11,7 +11,7 @@ void Player::addItemToInventory(const std::string& item)
     playerInventory.addItem(item);
 }
 
-void Player::deleteItemFromInventory(const std::string& item)
+void Player::deleteItemFromInventory(size_t index)
 {
-    playerInventory.deleteItem(item);
+    playerInventory.deleteItem(index);
 }

@@ -18,10 +18,6 @@ int main()
     player.addItemToInventory("Potion");
     player.addItemToInventory("Potion");
     player.printInventory();
-    player.deleteItemFromInventory("Short Sword");
-    player.deleteItemFromInventory("Axe");
-    player.deleteItemFromInventory("Dagger");
-    player.printInventory();
 
     return 0;
 }

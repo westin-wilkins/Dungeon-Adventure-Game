@@ -13,5 +13,5 @@ public:
 
     void addItem(const std::string& item);
 
-    void deleteItem(const std::string& item);
+    void deleteItem(size_t index);
 };

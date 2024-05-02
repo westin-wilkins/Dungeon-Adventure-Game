@@ -18,6 +18,6 @@ public:
 
     void addItemToInventory(const std::string& item);
 
-    void deleteItemFromInventory(const std::string& item);
+    void deleteItemFromInventory(size_t index);
 };
 

@@ -1,23 +1,16 @@
 #include <iostream>
 #include <string>
-#include <unordered_map>
+#include <vector>
 #include "Inventory.h"
 
 
 void Inventory::printInventory() const
 {
-    std::unordered_map<std::string, int> itemCounts;
-
     // Count the occurrences of each item
-    for (const std::string& item : inventory)
-    {
-        itemCounts[item]++;
-    }
-
     std::cout << "Inventory:\n";
-    for (const auto& pair : itemCounts)
+    for (size_t i = 0; i < inventory.size(); i++)
     {
-        std::cout << "-" << pair.first << " x" << pair.second << std::endl;
+        std::cout << i + 1 << ". " << inventory[i] << std::endl;
     }
 }
 
@@ -26,16 +19,15 @@ void Inventory::addItem(const std::string& item)
     inventory.push_back(item);
 }
 
-void Inventory::deleteItem(const std::string& item)
+void Inventory::deleteItem(size_t index)
 {
-    auto it = std::find(inventory.begin(), inventory.end(), item);
-    if (it != inventory.end())
+    if (index >= 1 && index <= inventory.size())
     {
-        inventory.erase(it);
-        std::cout << "Deleted " << item << " from inventory." << std::endl;
+        std::cout << "Deleted" << inventory[index - 1] << " from inventory." << std::endl;
+        inventory.erase(inventory.begin() + index - 1);
     }
     else
     {
-        std::cout << "Item not found." << std::endl;
+        std::cout << "Invalid item number." << std::endl;
     }
 }
