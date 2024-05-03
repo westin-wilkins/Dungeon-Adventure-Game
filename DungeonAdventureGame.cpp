@@ -9,7 +9,7 @@ int main()
     Inventory inventory;
     Player player(100);
 
-    player.setEquippedItem("Short Sword\n");
+    player.setEquippedItem("Short Sword");
 
     return 0;
 }

@@ -18,7 +18,7 @@ public:
 	Unit(int health, const std::string& name = "", const std::string& description = "",	//	Need to add rooms
 		const std::string& encounterDialogue = "");
 
-	
+	//	Methods
 
 	
 
