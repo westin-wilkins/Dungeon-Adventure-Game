@@ -1,17 +1,51 @@
 #include "Unit.h"
 
+//  Constructor
 Unit::Unit(int health, const std::string& name, const std::string& description,
     const std::string& encounterDialogue)
     : health(health), name(name), description(description),
     encounterDialogue(encounterDialogue)
 {}
 
-void Unit::printInventory() const
+//  Methods
+
+
+
+
+//  Getter methods
+int Unit::getHealth() const
 {
-	unitInventory.printInventory();
+    return health;
 }
 
-void Unit::addToInventory(const std::string& item)
+std::string Unit::getName() const
 {
-	unitInventory.addItem(item);
+    return name;
+}
+
+std::string Unit::getDescription() const
+{
+    return description;
+}
+
+std::string Unit::getencounterDialouge() const
+{
+    return encounterDialogue;
+}
+
+std::string Unit::getEquippedItem() const
+{
+    return equippedItem;
+}
+
+//  Setter methods
+void Unit::setHealth(int newHealth)
+{
+    health = newHealth;
+}
+
+void Unit::setEquippedItem(std::string newEquippedItem)
+{
+    equippedItem = newEquippedItem;
+    std::cout << "You equipped the " << equippedItem << std::endl;
 }
