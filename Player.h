@@ -2,22 +2,16 @@
 #include <iostream>
 #include <string>
 #include "inventory.h"
+#include "Unit.h"
 
-class Player
+class Player : public Unit
 {
 private:
-    int health;
     Inventory playerInventory;
 
 public:
-    explicit Player(int health)
-        : health(health)
-    {}
+    explicit Player(int health);
 
-    void printInventory() const;
 
-    void addItemToInventory(const std::string& item);
-
-    void deleteItemFromInventory(const std::string& item);
 };
 
