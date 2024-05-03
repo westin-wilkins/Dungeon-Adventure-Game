@@ -11,7 +11,7 @@ private:
 	std::string encounterDialogue;		//	Dialogue when first encountering an enemy
 	Inventory unitInventory;			//	Inventory
 	std::string equippedItem;			//	Weapon equipped by unit
-	//Room								//	Need to figure out how to make it work with Room class
+	//	Room							//	Need to figure out how to make it work with Room class
 
 public:
 	//	Constructor declaration
@@ -22,5 +22,20 @@ public:
 
 	void addToInventory(const std::string& item);
 
+	//	Getter methods
+	int getHealth() const;
+
+	std::string getName() const;
+
+	std::string getDescription() const;
+
+	std::string getencounterDialouge() const;
+
+	std::string getEquippedItem() const;
+
+	//	Setter methods
+	void setHealth(int newHealth);
+
+	void setEquippedItem(std::string newEquippedItem);
 };
 

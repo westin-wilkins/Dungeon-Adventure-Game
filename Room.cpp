@@ -1,6 +1,6 @@
 #include "Room.h"
 
-//Constructor
+//  Constructor
 Room::Room(std::string const& description,
     std::map<std::string, bool> exits,
     std::vector<std::string> itemsInRoom,
@@ -35,10 +35,10 @@ std::vector<std::string> Room::getEnemiesInRoom() const
 //  Setter methods
 void Room::setItemsInRoom(std::vector<std::string>& newItems)
 {
-    //Add code
+    //  Add code
 }
 
 void setExits(const std::map<std::string, bool>& newExits)
 {
-    //Add code
+    //  Add code
 }
