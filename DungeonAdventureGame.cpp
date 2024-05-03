@@ -9,8 +9,7 @@ int main()
     Inventory inventory;
     Player player(100);
 
-    player.addToInventory("Short Sword");
-    player.printInventory();
+    player.setEquippedItem("Short Sword\n");
 
     return 0;
 }

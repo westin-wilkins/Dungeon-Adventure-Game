@@ -18,9 +18,9 @@ public:
 	Unit(int health, const std::string& name = "", const std::string& description = "",	//	Need to add rooms
 		const std::string& encounterDialogue = "");
 
-	void printInventory() const;
+	
 
-	void addToInventory(const std::string& item);
+	
 
 	//	Getter methods
 	int getHealth() const;
@@ -29,7 +29,7 @@ public:
 
 	std::string getDescription() const;
 
-	std::string getencounterDialouge() const;
+	std::string getencounterDialouge() const; //	Need to move to Enemies class
 
 	std::string getEquippedItem() const;
 

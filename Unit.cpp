@@ -8,15 +8,9 @@ Unit::Unit(int health, const std::string& name, const std::string& description,
 {}
 
 //  Methods
-void Unit::printInventory() const
-{
-	unitInventory.printInventory();
-}
 
-void Unit::addToInventory(const std::string& item)
-{
-	unitInventory.addItem(item);
-}
+
+
 
 //  Getter methods
 int Unit::getHealth() const
@@ -53,4 +47,5 @@ void Unit::setHealth(int newHealth)
 void Unit::setEquippedItem(std::string newEquippedItem)
 {
     equippedItem = newEquippedItem;
+    std::cout << "You equipped the " << equippedItem << std::endl;
 }

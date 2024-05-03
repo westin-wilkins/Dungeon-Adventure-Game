@@ -12,6 +12,9 @@ private:
 public:
     explicit Player(int health);
 
+    //  Methods
+    void printInventory() const;
 
+    void addToInventory(const std::string& item);
 };
 
