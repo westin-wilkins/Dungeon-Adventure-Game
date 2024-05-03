@@ -1,24 +1,16 @@
 #include <iostream>
 #include "player.h"
 #include "Inventory.h"
+#include "Unit.h"
 
 
 int main()
 {
     Inventory inventory;
-    Player player(10);
+    Player player(100);
 
-    player.addItemToInventory("Short Sword");
-    player.addItemToInventory("Short Sword");
-    player.addItemToInventory("Axe");
-    player.addItemToInventory("Potion");
-    player.addItemToInventory("Potion");
-    player.addItemToInventory("Potion");
-    player.addItemToInventory("Potion");
-    player.addItemToInventory("Potion");
-    player.addItemToInventory("Potion");
+    player.addToInventory("Short Sword");
     player.printInventory();
-    player.deleteItemFromInventory(2);
 
     return 0;
 }
