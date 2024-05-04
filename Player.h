@@ -16,5 +16,11 @@ public:
     void printInventory() const;
 
     void addToInventory(const std::string& item);
+
+    //  Getter methods
+
+
+    //  Setter methods
+    void setEquippedItem(const Weapon& weapon);
 };
 

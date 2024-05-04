@@ -44,8 +44,3 @@ void Unit::setHealth(int newHealth)
     health = newHealth;
 }
 
-void Unit::setEquippedItem(std::string newEquippedItem)
-{
-    equippedItem = newEquippedItem;
-    std::cout << "You equipped the " << equippedItem << std::endl;
-}
