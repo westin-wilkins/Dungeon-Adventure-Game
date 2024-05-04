@@ -7,12 +7,7 @@ Player::Player(int health)
 {}
 
 //  Methods
-void Player::printInventory() const
-{
-	playerInventory.printInventory();
-}
-
-void Player::addToInventory(const std::string& item)
+void Player::addToInventory(const std::string& item)    //  Need to change this to take weapon class objects
 {
 	playerInventory.addItem(item);
 }
@@ -21,7 +16,7 @@ void Player::addToInventory(const std::string& item)
 
 
 //  Setter methods
-void Player::setEquippedItem(const Weapon& weapon)
+void Player::setEquippedItem(const Weapon& weapon)  //  Need to have it check if the item is in the inventory
 {
     std::string equippedItem = weapon.getWeaponName();
     std::cout << "You equipped the " << equippedItem << std::endl;
