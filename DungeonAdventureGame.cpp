@@ -19,6 +19,7 @@ public:
         Player player(100);
         player.addToInventory("Short Sword");
         player.addToInventory("Dagger");
+        player.addToInventory("Rusty Sword");
 
         const int screenWidth = 1920;
         const int screenHeight = 1080;
@@ -50,39 +51,37 @@ public:
 
     void drawMenu(int screenWidth, int screenHeight, const Player& player)
     {
-        //  Menu constants
+        // Menu constants
         const int menuWidth = 300;
         const int menuHeight = 120;
         const int menuX = (screenWidth - menuWidth) / 2;
         const int menuY = screenHeight - menuHeight - 50;
 
-        //  Inventory Screen
+        // Inventory constants
         const int inventoryWidth = 800;
         const int inventoryHeight = 500;
-        const int inventoryX = (screenWidth - inventoryWidth) / 2;
-        const int inventoryY = screenHeight - inventoryHeight - 50;
+        const int inventoryX = screenWidth - inventoryWidth; 
+        const int inventoryY = menuY;
 
-        //  Seperation Line
+        // Seperation Line
         DrawLine(0, menuY - 10, screenWidth, menuY - 10, RAYWHITE);
 
-        //  Menu Screen
+        // Menu Screen
         DrawText("===== Menu =====", menuX, menuY, 24, RAYWHITE);
-        DrawText("1. Print inventory", menuX, menuY + 30, 24, RAYWHITE);
-        DrawText("2. Other menu option", menuX, menuY + 60, 24, RAYWHITE);
+        DrawText("1. Placeholder", menuX, menuY + 30, 24, RAYWHITE);
+        DrawText("2. Placeholder", menuX, menuY + 60, 24, RAYWHITE);
         DrawText("Q. Quit", menuX, menuY + 90, 24, RAYWHITE);
 
-        //  Inventory
+        // Inventory Screen
         const Inventory& inventory = player.getPlayerInventory();
         const std::vector<std::string>& items = inventory.getItems();
 
-        inventoryText = "Inventory items:\n";
-        for (const std::string& item : items)
+        inventoryText = "Inventory items:\n\n";
+        for (size_t i = 0; i < items.size(); ++i)
         {
-            inventoryText += "- " + item + "\n";
+            inventoryText += std::to_string(i + 1) + ". " + items[i] + "\n\n";
         }
-        DrawText(inventoryText.c_str(), inventoryX, inventoryY + 150, 24, RAYWHITE);
-
-        
+        DrawText(inventoryText.c_str(), inventoryX, inventoryY, 24, RAYWHITE);
     }
 };
 

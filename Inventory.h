@@ -7,6 +7,7 @@ class Inventory
 {
 private:
     std::vector<std::string> inventory;
+                                            //  Need to add a max inventory size
 
 public:
     //  Methods
