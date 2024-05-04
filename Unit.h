@@ -1,16 +1,17 @@
 #pragma once
 #include "Inventory.h"
 #include "Room.h"
+#include "Weapon.h"
 
 class Unit
 {
 private:
 	int health;
-	std::string name;					//	Name of unit
-	std::string description;			//	Description of unit
-	std::string encounterDialogue;		//	Dialogue when first encountering an enemy
-	Inventory unitInventory;			//	Inventory
-	std::string equippedItem;			//	Weapon equipped by unit
+	std::string name;					
+	std::string description;			//	Description of unit when examined by the player
+	std::string encounterDialogue;		//	Dialogue when first encountering an enemy in a room
+	Inventory unitInventory;			
+	std::string equippedItem;			
 	//	Room							//	Need to figure out how to make it work with Room class
 
 public:
@@ -36,6 +37,6 @@ public:
 	//	Setter methods
 	void setHealth(int newHealth);
 
-	void setEquippedItem(std::string newEquippedItem);
+	
 };
 
