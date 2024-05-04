@@ -10,6 +10,7 @@ private:
     Inventory playerInventory;
 
 public:
+    //  Constructor declaration
     explicit Player(int health);
 
     //  Methods

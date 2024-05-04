@@ -10,8 +10,8 @@ void Inventory::addItem(const std::string& item)
     inventory.push_back(item);
 }
 
-void Inventory::deleteItem(size_t index)        //Change so that item is dropped 
-                                                //(added to room contents instead of deleted)
+void Inventory::deleteItem(size_t index)        //  Change so that item is dropped 
+                                                //  added to room contents instead of deleted
 {
     if (index >= 1 && index <= inventory.size())
     {
