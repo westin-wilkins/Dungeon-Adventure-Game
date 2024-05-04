@@ -4,16 +4,7 @@
 #include "Inventory.h"
 
 
-void Inventory::printInventory() const
-{
-    // Count the occurrences of each item
-    std::cout << "Inventory:\n";
-    for (size_t i = 0; i < inventory.size(); i++)
-    {
-        std::cout << i + 1 << ". " << inventory[i] << std::endl;
-    }
-}
-
+//  Methods
 void Inventory::addItem(const std::string& item)
 {
     inventory.push_back(item);
@@ -31,4 +22,10 @@ void Inventory::deleteItem(size_t index)        //Change so that item is dropped
     {
         std::cout << "Invalid item number." << std::endl;
     }
+}
+
+//  Getter methods
+const std::vector<std::string>& Inventory::getItems() const
+{
+    return inventory;
 }

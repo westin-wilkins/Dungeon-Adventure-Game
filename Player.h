@@ -13,12 +13,13 @@ public:
     explicit Player(int health);
 
     //  Methods
-    void printInventory() const;
-
     void addToInventory(const std::string& item);
 
     //  Getter methods
-
+    const Inventory& getPlayerInventory() const
+    {
+        return playerInventory;
+    }
 
     //  Setter methods
     void setEquippedItem(const Weapon& weapon);
