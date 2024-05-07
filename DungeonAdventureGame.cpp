@@ -7,7 +7,6 @@
 #include "Weapon.h"
 
 
-
 class Game
 {
 private:
@@ -44,14 +43,6 @@ public:
         CloseWindow();
     }
 
-    void handleInput(Player& player)
-    {
-        if (IsKeyPressed(KEY_ONE))
-        {
-            // Add code
-        }
-    }
-
     void drawMenu(int screenWidth, int screenHeight, const Player& player)
     {
         // Menu constants
@@ -86,8 +77,21 @@ public:
         }
         DrawText(inventoryText.c_str(), inventoryX, inventoryY, 24, RAYWHITE);
 
-        //  Equipped item text
+        
 
+    }
+
+    void handleInput(Player& player)
+    {
+        if (IsKeyPressed(KEY_ONE))
+        {
+            //  Equipped Screen
+            const Weapon& currentlyEquippedWeapon = player.getEquippedWeapon();
+            std::string equippedItemText = "Equipped Weapon: \n\n";
+            equippedItemText += currentlyEquippedWeapon.getWeaponName() + "\n";
+
+            DrawText(equippedItemText.c_str(), 400, 800, 24, RAYWHITE);
+        }
     }
 };
 

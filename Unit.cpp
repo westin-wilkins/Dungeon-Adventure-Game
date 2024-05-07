@@ -7,7 +7,7 @@ Weapon Unit::hands("Hands", "No waepon equipped", 0);
 
 Unit::Unit(int health, const std::string& name, const std::string& description,
     Weapon& equippedItem) : health(health), name(name), description(description), 
-    equippedItem(equippedItem)
+    equippedWeapon(equippedWeapon)
 {}
 
 
@@ -32,9 +32,9 @@ const Inventory& Unit::getInventory() const
     return unitInventory;
 }
 
-const Weapon& Unit::getEquippedItem() const
+const Weapon& Unit::getEquippedWeapon() const
 {
-    return equippedItem;
+    return equippedWeapon;
 }
 
 //  Setter methods
