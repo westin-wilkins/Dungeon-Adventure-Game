@@ -128,7 +128,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="DungeonAdventureGame.cpp" />
-    <ClCompile Include="Enemies.cpp" />
     <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Room.cpp" />
@@ -136,7 +135,6 @@
     <ClCompile Include="Weapon.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Enemies.h" />
     <ClInclude Include="Inventory.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Room.h" />
