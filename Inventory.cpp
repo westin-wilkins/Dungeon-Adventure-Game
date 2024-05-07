@@ -5,9 +5,9 @@
 
 
 //  Methods
-void Inventory::addItem(const std::string& item)
+void Inventory::addItem(const Weapon& weapon)
 {
-    inventory.push_back(item);
+    inventory.push_back(weapon.getWeaponName());
 }
 
 void Inventory::deleteItem(size_t index)        //  Change so that item is dropped 

@@ -16,9 +16,8 @@ public:
 
 	//	Getter methods
 	std::string getWeaponName() const;
-
 	std::string getWeaponDescription() const;
-
 	int getWeaponDamage() const;
 };
+
 

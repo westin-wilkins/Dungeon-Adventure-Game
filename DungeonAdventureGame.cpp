@@ -17,9 +17,12 @@ public:
     void run()
     {
         Player player(100);
-        player.addToInventory("Short Sword");
-        player.addToInventory("Dagger");
-        player.addToInventory("Rusty Sword");
+
+        Weapon shortsword("Short Sword", "An iron short sword", 10);
+
+        
+
+        player.addToInventory(shortsword);
 
         const int screenWidth = 1920;
         const int screenHeight = 1080;
@@ -68,7 +71,7 @@ public:
 
         // Menu Screen
         DrawText("===== Menu =====", menuX, menuY, 24, RAYWHITE);
-        DrawText("1. Placeholder", menuX, menuY + 30, 24, RAYWHITE);
+        DrawText("1. Equip Weapon", menuX, menuY + 30, 24, RAYWHITE);
         DrawText("2. Placeholder", menuX, menuY + 60, 24, RAYWHITE);
         DrawText("Q. Quit", menuX, menuY + 90, 24, RAYWHITE);
 
@@ -82,6 +85,9 @@ public:
             inventoryText += std::to_string(i + 1) + ". " + items[i] + "\n\n";
         }
         DrawText(inventoryText.c_str(), inventoryX, inventoryY, 24, RAYWHITE);
+
+        //  Equipped item text
+
     }
 };
 

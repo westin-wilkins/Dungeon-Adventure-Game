@@ -2,6 +2,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "Weapon.h"
+
 
 class Inventory
 {
@@ -11,7 +13,7 @@ private:
 
 public:
     //  Methods
-    void addItem(const std::string& item);
+    void addItem(const Weapon& weapon);
 
     void deleteItem(size_t index);
 

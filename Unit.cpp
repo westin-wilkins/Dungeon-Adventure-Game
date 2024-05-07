@@ -1,15 +1,14 @@
 #include "Unit.h"
 
+
+
 //  Constructor
+Weapon Unit::hands("Hands", "No waepon equipped", 0);
+
 Unit::Unit(int health, const std::string& name, const std::string& description,
-    const std::string& encounterDialogue)
-    : health(health), name(name), description(description),
-    encounterDialogue(encounterDialogue)
+    Weapon& equippedItem) : health(health), name(name), description(description), 
+    equippedItem(equippedItem)
 {}
-
-//  Methods
-
-
 
 
 //  Getter methods
@@ -28,12 +27,12 @@ std::string Unit::getDescription() const
     return description;
 }
 
-std::string Unit::getencounterDialouge() const
+const Inventory& Unit::getInventory() const
 {
-    return encounterDialogue;
+    return unitInventory;
 }
 
-std::string Unit::getEquippedItem() const
+const Weapon& Unit::getEquippedItem() const
 {
     return equippedItem;
 }
