@@ -3,7 +3,7 @@
 
 
 //  Constructor
-Player::Player(int health, Weapon& equippedItem) : Unit(health), equippedItem(equippedItem)
+Player::Player(int health, Weapon& equippedItem) : Unit(health), equippedWeapon(equippedWeapon)
 {}
 
 //  Methods
@@ -18,14 +18,14 @@ const Inventory& Player::getPlayerInventory() const
     return playerInventory;
 }
 
-const Weapon& Player::getEquippedItem() const
+const Weapon& Player::getEquippedWeapon() const
 {
-    return equippedItem;
+    return equippedWeapon;
 }
 
 //  Setter methods
-void Player::setEquippedItem(const Weapon& weapon)      //  Need to have it check if the item is in the inventory
+void Player::setEquippedWeapon(const Weapon& weapon)      //  Need to have it check if the item is in the inventory
 {
-    std::string equippedItem = weapon.getWeaponName();
-    std::cout << "You equipped the " << equippedItem << std::endl;
+    std::string equippedWeapon = weapon.getWeaponName();
+    std::cout << "You equipped the " << equippedWeapon << std::endl;
 }

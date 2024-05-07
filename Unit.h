@@ -11,7 +11,7 @@ private:
 	std::string name;					
 	std::string description;			//	Description of unit when examined by the player
 	Inventory unitInventory;			
-	Weapon& equippedItem;			
+	Weapon& equippedWeapon;
 	//	Room							//	Need to figure out how to make it work with Room class
 
 public:
@@ -19,14 +19,14 @@ public:
 
 	//	Constructor declaration
 	Unit(int health, const std::string& name = "", const std::string& description = "",	//	Need to add rooms
-		 Weapon& equippedItem = hands);
+		 Weapon& equippedWeapon = hands);
 
 	//	Getter methods
 	int getHealth() const;
 	std::string getName() const;
 	std::string getDescription() const;
 	const Inventory& getInventory() const;
-	const Weapon& getEquippedItem() const;
+	const Weapon& getEquippedWeapon() const;
 
 	//	Setter methods
 	void setHealth(int newHealth);
